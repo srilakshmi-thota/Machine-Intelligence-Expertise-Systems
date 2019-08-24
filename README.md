@@ -10,9 +10,9 @@ Each directory includes the assignment problem statement(.pdf),README(.txt),pyth
 
 ##List of assignments:
 
- 1.Decision Trees
+ 1.Decision Trees   
  2.Clustering  
  
-##References
+##References   
 •Machine Learning Textbook slides http://www.cs.cmu.edu/~tom/mlbook-chapter-slides.html
 
