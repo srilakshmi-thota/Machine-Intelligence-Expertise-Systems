@@ -7,6 +7,7 @@ This repository includes all the Coding Assignments of the Machine Intelligence 
 /Assignment1
 /Assignment2
 /Assignment3
+
 Each directory includes the assignment Problem statement(.pdf),README(.txt),python code(.py) and the used datasets.
 
 ##List of assignments:
