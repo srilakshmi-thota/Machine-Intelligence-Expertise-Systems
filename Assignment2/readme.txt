@@ -1,48 +1,71 @@
-Libraries used:
-->scipy.io for loading the data from .mat files
-->matplotlib.pyplot for plotting the roc curve
-->numpy for calculating the area under the curve
+Libraries used: 
+->numpy  for using arrays and calculating sum and mean of array
+->pandas  for reading the excel file
+
 
 
 Inputs:
-->actual.mat  :data file containning the actuals labels 
-->predicted.mat  :data file containning classifier's output(in a range of [0,1])
+->dataset.xlsx : excel sheet containing the dataset that need to be classified into clusters.
+
 
 
 Outputs:
-->Plot displaying the ROC_CURVE
-->AUC(the area under the ROC_CURVE is printed
+->For K=3 with given intial centroids:Plot displaying the classfied clusters of the dataset 
+
+->For K=1 : Plot displaying the classfied clusters of the dataset by taking random  initial centroids
+->For K=2:Plot displaying the classfied clusters of the dataset by taking random initial centroids
+->For K=4:Plot displaying the classfied clusters of the dataset by taking random initial centroids
+->For K=5:Plot displaying the classfied clusters of the dataset by taking random initial centroids
+->For K=6:Plot displaying the classfied clusters of the dataset by taking random initial centroids
+->For K=7:Plot displaying the classfied clusters of the dataset by taking random initial centroids
+
+->For K=3:Plot displaying the classfied clusters of the dataset by taking random initial centroids
+->Error vs K plot
+
+
 
 
 User defined functions:
-1.confusion_metrics
-->Inputs:labels,predictions,threshold
-->Ouputs:tpf,fpf
-->This function essentially compares the labels(actual values)  and checks whether the predictions(classifier output) is satisfying the condition of threshold and accordingly updates the values of true_positive,false_positive,true_negative,false_negative.
-Pseudo code:
-if(labels[i]=1):
-          if predictions[i]>=threshold:
-               true_positive++;
-          else:
-               false_negative++;
-else:
-         if predictions[i]>=threshold:
-               flase_positive++;
-          else:
-               true_negative++;
-tpf = true_positive / (true_positive + false_negative);
-fpf = false_positive / (false_positive + true_negative);
+1.euclidean_distance
+->Inputs:a,b
+->Outputs:distances
+->Euclidean distance is a function that takes in a and b and returns the distances array in which d[i][j] is the euclidean distances between a[i] and b[j]
 
-2.results
-->Inputs:labels,predictions
-->Outputs:Plot displaying the ROC_CURVE,Printing the AUC value
-->This function takes the labels and the predictions and calls the confusion metrics function for all the values of thresholds ranging from 0 to 1 by increementing by a step size of 0.0002.And finally plots the ROC_curve by plotting tpf along Yaxis and fpf along Xaxis.
-->Uses the trapz function from numpy library to calculate the area by integrating along the given axis using the composite trapezoidal rule.
+2.kmeans
+->Inputs:dataset,k,centroids
+->Outputs:centroids
+->k-means is an algorithm that takes in dataset and a constant k denoting the number of clusters and the intial centroids and returns the final centroids which define the clusters of data in the dataset which are similar to one another.
 
-Results file:
-->Contains the Ipython console displaying the ROC_CURVE plot and the value of AUC 
+3.getLabels
+->Inputs:dataset,centroids,k
+->Outputs:labels
+->Returns a labels array containning the cluster label to which each datapoint in the dataset belong to by evaluating the euclidean distance of the datapoint to the centroids and assigning the nearest centroid label to the datapoint.
 
-P.s:The python code is included in the python_code file.
+4.getCentroids
+->Inputs:dataset,labels,k,centroids
+->Outputs:centroids
+->Returns updated k centroids each of dimension 2.Each centroid is the geometric mean of the points that have that centroid's label.
+
+5.should_stop_iterations
+->Inputs:old_centroids,centroids
+->Outputs:sum of the distance btwn the old and new centroids
+->Returns 0 if k-means is done by checking the termination condition.K-means terminates if the centroids stop changing.Else returns the sum of the euclidean distance btwn the corresponding old and new centroids.
+
+6.sum_of_squared_error
+->Inputs:dataset,labels,centroids
+->Outputs:error
+->Computes the error by taking the sum of the square of the euclidean distance of the dataset point to the corresponding  centroid assigned to it.
+
+7.visualise_data
+->Inputs:centroids,labels,dataset,fig_num
+->Outputs:plot
+->Visualise the dataset into the clusters formed as a resultant of appyling k-means clustering to the dataset.
+
+
+Results:
+->All the plots obtained are included in the plot_output file.
+
+
 
 
 
