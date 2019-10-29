@@ -7,14 +7,16 @@ This repository includes all the Coding Assignments of the Machine Intelligence 
 /Assignment1
 /Assignment2
 /Assignment3
+/Assignment4
 
-Each directory includes the assignment Problem statement(.pdf),README(.txt),python code(.py) and the used datasets.
+Each directory includes the assignment Problem statement(.doc),README ,python code(.py) and the used datasets.
 
 ##List of assignments:
 
  1.Decision Trees   
  2.Clustering  
  3.Metrics(ROC_curve and AUC)
+ 4.Neural Network
  
 ##References   
 •Machine Learning Textbook slides http://www.cs.cmu.edu/~tom/mlbook-chapter-slides.html
