@@ -13,8 +13,8 @@ __Outputs:__\
 
 __User defined functions:__\
 __1.confusion_metrics__\
-Inputs:labels,predictions,threshold\
-Ouputs:tpf,fpf\
+Inputs : labels,predictions,threshold\
+Ouputs : tpf,fpf\
 This function essentially compares the labels(actual values)  and checks whether the predictions(classifier output) is satisfying the condition of threshold and accordingly updates the values of true_positive,false_positive,true_negative,false_negative.
 
 
