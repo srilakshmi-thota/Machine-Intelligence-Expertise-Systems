@@ -19,7 +19,7 @@ __case1:__ reducing max_depth\
  Test Accuracy for Max_depth =  2\
  Test Accuracy for Max_depth =  1
 
-__Pruning results for __\
+__Pruning results for :__\
 __case2:__ reducing max_leaf_nodes\
  Test Accuracy for Max_leaf_nodes=8\
  Test Accuracy for Max_leaf_nodes=7\
