@@ -7,17 +7,15 @@ __Directories included__\
 Assignment1\
 Assignment2\
 Assignment3\
-Assignment4\
+Assignment4
 
 Each directory includes the assignment Problem statement(.doc),README ,python code(.py) and the used datasets.
 
 __List of assignments:__\
- 1.Decision Trees\   
+ 1.Decision Trees 
  2.Clustering  \
  3.Metrics(ROC_curve and AUC)\
- 4.Neural Network
- 
- 
+ 4.Neural Network 
  
 __References:__\
 •Machine Learning Textbook slides http://www.cs.cmu.edu/~tom/mlbook-chapter-slides.html
