@@ -8,7 +8,8 @@ __Directories included__\
 Assignment1 : Decision Tree classifier for IRIS-data\
 Assignment2 : Clustering \
 Assignment3 : Metrics(ROC_curve and AUC)\
-Assignment4 : Neural Network to classify IRIS-data 
+Assignment4 : Neural Network to classify IRIS-data\
+Assignment5 : K-NN classifier to analyse banknote authencation
 
 Each directory includes the assignment Problem statement(.doc),README ,python code(.py) and the used datasets.
 
